@@ -1,34 +1,56 @@
-// optional , default and rest parameters
 
 
-const concatName = (firstName: string, lastName?: string): string =>{
-    if(!lastName){
-        return firstName
-    }
 
-    return firstName + " " + lastName
+// object type, type allias, interface and enum
+
+const person: {
+    name: string,
+    age: number
+} = {
+    name: "romiz",
+    age: 22
 }
 
+console.log(person)
 
-// console.log(concatName("Romiz"))
-
-
-// here 'Ariful is a default paramenter 
-const concatName2 = (firstName: string, lastName: string = "Ariful"): string =>{
-    return firstName + " " + lastName
+type Person = {
+    name: string,
+    age: number
 }
 
-// console.log(concatName2("Md"))
+const user2: Person = {
+    name: "Romiz khan",
+    age: 22,
 
-
-
-// rest parameters are used to represent an indefinite number of arguments as an array
-const sum = (firstNumber: number, ...restNumbers: number[]): number =>{
-    let total = firstNumber
-    for(const num of restNumbers){
-        total += num
-    }
-    return total
 }
 
-console.log(sum(1, 2, 3, 4, 5, 85)) // 15
+const user3: Person = {
+    name: "Romiz khan",
+    age: 32,
+}
+
+console.log(user2)
+console.log(user3)
+
+// interface 
+
+interface User {
+    id: number,
+    name: string,
+    age: number,
+    isStudent: boolean
+}
+interface User {
+    address?: string
+    dateOfBirth: string
+}
+
+const user4: User = {
+    id: 1,
+    name: "Romiz khan",
+    age: 22,
+    isStudent: true,
+    dateOfBirth: "1999-01-01"
+}
+
+console.log(user4)
