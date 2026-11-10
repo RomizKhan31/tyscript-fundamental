@@ -1,8 +1,7 @@
 
 
 
-// object type, type allias, interface and enum
-
+// object type, type allias and interface
 const person: {
     name: string,
     age: number
